@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="BussinessCenterDb.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="BussinessCenterDbStoreContainer">
+    <EntitySet Name="Role" EntityType="BussinessCenterDb.Store.Role" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SchemaVersions" EntityType="BussinessCenterDb.Store.SchemaVersions" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SecurityQuestion" EntityType="BussinessCenterDb.Store.SecurityQuestion" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="User" EntityType="BussinessCenterDb.Store.User" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserClaim" EntityType="BussinessCenterDb.Store.UserClaim" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserLogin" EntityType="BussinessCenterDb.Store.UserLogin" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserRole" EntityType="BussinessCenterDb.Store.UserRole" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_dbo_UserClaim_dbo_User_UserId" Association="BussinessCenterDb.Store.FK_dbo_UserClaim_dbo_User_UserId">
+      <End Role="User" EntitySet="User" />
+      <End Role="UserClaim" EntitySet="UserClaim" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_UserLogin_dbo_User_UserId" Association="BussinessCenterDb.Store.FK_dbo_UserLogin_dbo_User_UserId">
+      <End Role="User" EntitySet="User" />
+      <End Role="UserLogin" EntitySet="UserLogin" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserRole_Role" Association="BussinessCenterDb.Store.FK_UserRole_Role">
+      <End Role="Role" EntitySet="Role" />
+      <End Role="UserRole" EntitySet="UserRole" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserRole_User" Association="BussinessCenterDb.Store.FK_UserRole_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="UserRole" EntitySet="UserRole" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="SchemaVersions">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ScriptName" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Applied" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SecurityQuestion">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Question" Type="nvarchar" Nullable="true" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Address" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="City" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="FirstName" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="LastName" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="MobileNumber" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="PostalCode" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="State" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="LastLoginDateandTime" Type="datetime" Nullable="true" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" Nullable="true" MaxLength="256" />
+    <Property Name="EmailConfirmed" Type="bit" Nullable="false" />
+    <Property Name="ActivationCode" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Password" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SecurityStamp" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="PhoneNumber" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="PhoneNumberConfirmed" Type="bit" Nullable="false" />
+    <Property Name="TwoFactorEnabled" Type="bit" Nullable="false" />
+    <Property Name="LockoutEndDateUtc" Type="datetime" Nullable="true" />
+    <Property Name="LockoutEnabled" Type="bit" Nullable="false" />
+    <Property Name="AccessFailedCount" Type="int" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="SecurityQuestion1" Type="nvarchar" Nullable="true" MaxLength="200" />
+    <Property Name="SecurityQuestion2" Type="nvarchar" Nullable="true" MaxLength="200" />
+    <Property Name="SecurityQuestion3" Type="nvarchar" Nullable="true" MaxLength="200" />
+    <Property Name="SecurityAnswer1" Type="nvarchar" Nullable="true" MaxLength="500" />
+    <Property Name="SecurityAnswer2" Type="nvarchar" Nullable="true" MaxLength="500" />
+    <Property Name="SecurityAnswer3" Type="nvarchar" Nullable="true" MaxLength="500" />
+    <Property Name="Title" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="ActivationDate" Type="datetime" Nullable="true" />
+  </EntityType>
+  <EntityType Name="UserClaim">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="ClaimType" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ClaimValue" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="UserLogin">
+    <Key>
+      <PropertyRef Name="LoginProvider" />
+      <PropertyRef Name="ProviderKey" />
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="LoginProvider" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="ProviderKey" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserRole">
+    <Key>
+      <PropertyRef Name="Role_Id" />
+      <PropertyRef Name="User_Id" />
+    </Key>
+    <Property Name="Role_Id" Type="int" Nullable="false" />
+    <Property Name="User_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_dbo_UserClaim_dbo_User_UserId">
+    <End Role="User" Type="BussinessCenterDb.Store.User" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="UserClaim" Type="BussinessCenterDb.Store.UserClaim" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserClaim">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_UserLogin_dbo_User_UserId">
+    <End Role="User" Type="BussinessCenterDb.Store.User" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="UserLogin" Type="BussinessCenterDb.Store.UserLogin" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserLogin">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserRole_Role">
+    <End Role="Role" Type="BussinessCenterDb.Store.Role" Multiplicity="1" />
+    <End Role="UserRole" Type="BussinessCenterDb.Store.UserRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserRole">
+        <PropertyRef Name="Role_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserRole_User">
+    <End Role="UserRole" Type="BussinessCenterDb.Store.UserRole" Multiplicity="*" />
+    <End Role="User" Type="BussinessCenterDb.Store.User" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserRole">
+        <PropertyRef Name="User_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BussinessCenterDb" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Role" EntityType="BussinessCenterDb.Role" />
+          <EntitySet Name="SchemaVersions" EntityType="BussinessCenterDb.SchemaVersions" />
+          <EntitySet Name="SecurityQuestion" EntityType="BussinessCenterDb.SecurityQuestion" />
+          <EntitySet Name="User" EntityType="BussinessCenterDb.User" />
+          <EntitySet Name="UserClaim" EntityType="BussinessCenterDb.UserClaim" />
+          <EntitySet Name="UserLogin" EntityType="BussinessCenterDb.UserLogin" />
+          <AssociationSet Name="FK_dbo_UserClaim_dbo_User_UserId" Association="BussinessCenterDb.FK_dbo_UserClaim_dbo_User_UserId">
+            <End Role="User" EntitySet="User" />
+            <End Role="UserClaim" EntitySet="UserClaim" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_UserLogin_dbo_User_UserId" Association="BussinessCenterDb.FK_dbo_UserLogin_dbo_User_UserId">
+            <End Role="User" EntitySet="User" />
+            <End Role="UserLogin" EntitySet="UserLogin" />
+          </AssociationSet>
+          <AssociationSet Name="UserRole" Association="BussinessCenterDb.UserRole">
+            <End Role="Role" EntitySet="Role" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Role">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="User" Relationship="BussinessCenterDb.UserRole" FromRole="Role" ToRole="User" />
+        </EntityType>
+        <EntityType Name="SchemaVersions">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ScriptName" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Applied" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="SecurityQuestion">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Question" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MobileNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PostalCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="State" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LastLoginDateandTime" Type="DateTime" Precision="3" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="EmailConfirmed" Type="Boolean" Nullable="false" />
+          <Property Name="ActivationCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SecurityStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumberConfirmed" Type="Boolean" Nullable="false" />
+          <Property Name="TwoFactorEnabled" Type="Boolean" Nullable="false" />
+          <Property Name="LockoutEndDateUtc" Type="DateTime" Precision="3" />
+          <Property Name="LockoutEnabled" Type="Boolean" Nullable="false" />
+          <Property Name="AccessFailedCount" Type="Int32" Nullable="false" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="SecurityQuestion1" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="SecurityQuestion2" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="SecurityQuestion3" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="SecurityAnswer1" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SecurityAnswer2" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SecurityAnswer3" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ActivationDate" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="UserClaim" Relationship="BussinessCenterDb.FK_dbo_UserClaim_dbo_User_UserId" FromRole="User" ToRole="UserClaim" />
+          <NavigationProperty Name="UserLogin" Relationship="BussinessCenterDb.FK_dbo_UserLogin_dbo_User_UserId" FromRole="User" ToRole="UserLogin" />
+          <NavigationProperty Name="Role" Relationship="BussinessCenterDb.UserRole" FromRole="User" ToRole="Role" />
+        </EntityType>
+        <EntityType Name="UserClaim">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="ClaimType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ClaimValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="User" Relationship="BussinessCenterDb.FK_dbo_UserClaim_dbo_User_UserId" FromRole="UserClaim" ToRole="User" />
+        </EntityType>
+        <EntityType Name="UserLogin">
+          <Key>
+            <PropertyRef Name="LoginProvider" />
+            <PropertyRef Name="ProviderKey" />
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="LoginProvider" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ProviderKey" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="User" Relationship="BussinessCenterDb.FK_dbo_UserLogin_dbo_User_UserId" FromRole="UserLogin" ToRole="User" />
+        </EntityType>
+        <Association Name="FK_dbo_UserClaim_dbo_User_UserId">
+          <End Type="BussinessCenterDb.User" Role="User" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="BussinessCenterDb.UserClaim" Role="UserClaim" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserClaim">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_UserLogin_dbo_User_UserId">
+          <End Type="BussinessCenterDb.User" Role="User" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="BussinessCenterDb.UserLogin" Role="UserLogin" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserLogin">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="UserRole">
+          <End Type="BussinessCenterDb.Role" Role="Role" Multiplicity="*" />
+          <End Type="BussinessCenterDb.User" Role="User" Multiplicity="*" />
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BussinessCenterDbStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="Role">
+      <EntityTypeMapping TypeName="IsTypeOf(BussinessCenterDb.Role)">
+        <MappingFragment StoreEntitySet="Role">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SchemaVersions">
+      <EntityTypeMapping TypeName="IsTypeOf(BussinessCenterDb.SchemaVersions)">
+        <MappingFragment StoreEntitySet="SchemaVersions">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ScriptName" ColumnName="ScriptName" />
+          <ScalarProperty Name="Applied" ColumnName="Applied" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SecurityQuestion">
+      <EntityTypeMapping TypeName="IsTypeOf(BussinessCenterDb.SecurityQuestion)">
+        <MappingFragment StoreEntitySet="SecurityQuestion">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Question" ColumnName="Question" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User">
+      <EntityTypeMapping TypeName="IsTypeOf(BussinessCenterDb.User)">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+          <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="LastLoginDateandTime" ColumnName="LastLoginDateandTime" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+          <ScalarProperty Name="ActivationCode" ColumnName="ActivationCode" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+          <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+          <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
+          <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+          <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="SecurityQuestion1" ColumnName="SecurityQuestion1" />
+          <ScalarProperty Name="SecurityQuestion2" ColumnName="SecurityQuestion2" />
+          <ScalarProperty Name="SecurityQuestion3" ColumnName="SecurityQuestion3" />
+          <ScalarProperty Name="SecurityAnswer1" ColumnName="SecurityAnswer1" />
+          <ScalarProperty Name="SecurityAnswer2" ColumnName="SecurityAnswer2" />
+          <ScalarProperty Name="SecurityAnswer3" ColumnName="SecurityAnswer3" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ActivationDate" ColumnName="ActivationDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserClaim">
+      <EntityTypeMapping TypeName="IsTypeOf(BussinessCenterDb.UserClaim)">
+        <MappingFragment StoreEntitySet="UserClaim">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+          <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserLogin">
+      <EntityTypeMapping TypeName="IsTypeOf(BussinessCenterDb.UserLogin)">
+        <MappingFragment StoreEntitySet="UserLogin">
+          <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+          <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="UserRole" TypeName="BussinessCenterDb.UserRole" StoreEntitySet="UserRole">
+      <EndProperty Name="Role">
+        <ScalarProperty Name="Id" ColumnName="Role_Id" />
+      </EndProperty>
+      <EndProperty Name="User">
+        <ScalarProperty Name="Id" ColumnName="User_Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

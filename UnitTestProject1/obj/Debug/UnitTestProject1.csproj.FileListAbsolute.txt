@@ -1,0 +1,27 @@
+D:\Projects\UnitTestProject1\obj\Debug\UnitTestProject1.csprojResolveAssemblyReference.cache
+D:\Projects\UnitTestProject1\bin\Debug\UnitTestProject1.dll.config
+D:\Projects\UnitTestProject1\bin\Debug\UnitTestProject1.dll
+D:\Projects\UnitTestProject1\bin\Debug\UnitTestProject1.pdb
+D:\Projects\UnitTestProject1\bin\Debug\BusinessCenter.Data.dll
+D:\Projects\UnitTestProject1\bin\Debug\Effort.dll
+D:\Projects\UnitTestProject1\bin\Debug\EntityFramework.dll
+D:\Projects\UnitTestProject1\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projects\UnitTestProject1\bin\Debug\Moq.dll
+D:\Projects\UnitTestProject1\bin\Debug\NMemory.dll
+D:\Projects\UnitTestProject1\bin\Debug\System.Data.Common.dll
+D:\Projects\UnitTestProject1\bin\Debug\System.IO.dll
+D:\Projects\UnitTestProject1\bin\Debug\System.Runtime.dll
+D:\Projects\UnitTestProject1\bin\Debug\System.Text.Encoding.dll
+D:\Projects\UnitTestProject1\bin\Debug\System.Threading.Tasks.dll
+D:\Projects\UnitTestProject1\bin\Debug\BusinessCenter.Data.pdb
+D:\Projects\UnitTestProject1\bin\Debug\Effort.xml
+D:\Projects\UnitTestProject1\bin\Debug\EntityFramework.xml
+D:\Projects\UnitTestProject1\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projects\UnitTestProject1\bin\Debug\Moq.xml
+D:\Projects\UnitTestProject1\bin\Debug\NMemory.xml
+D:\Projects\UnitTestProject1\obj\Debug\UnitTestProject1.dll
+D:\Projects\UnitTestProject1\obj\Debug\UnitTestProject1.pdb
+D:\Projects\UnitTestProject1\bin\Debug\BusinessCenter.Service.dll
+D:\Projects\UnitTestProject1\bin\Debug\BusinessCenter.Service.pdb
+C:\Users\CodeIT\Desktop\New folder\UnitTestProject1\obj\Debug\UnitTestProject1.csprojResolveAssemblyReference.cache
+C:\Users\CodeIT\Desktop\New folder\UnitTestProject1\obj\Debug\UnitTestProject1.dll

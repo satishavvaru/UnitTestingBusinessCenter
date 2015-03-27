@@ -1,0 +1,27 @@
+E:\DCBusinessCenter\BusinessCenter.Service\bin\Debug\BusinessCenter.Service.dll
+E:\DCBusinessCenter\BusinessCenter.Service\bin\Debug\BusinessCenter.Service.pdb
+E:\DCBusinessCenter\BusinessCenter.Service\bin\Debug\BusinessCenter.Data.dll
+E:\DCBusinessCenter\BusinessCenter.Service\bin\Debug\EntityFramework.dll
+E:\DCBusinessCenter\BusinessCenter.Service\bin\Debug\BusinessCenter.Data.pdb
+E:\DCBusinessCenter\BusinessCenter.Service\bin\Debug\EntityFramework.xml
+E:\DCBusinessCenter\BusinessCenter.Service\obj\Debug\BusinessCenter.Service.csprojResolveAssemblyReference.cache
+E:\DCBusinessCenter\BusinessCenter.Service\obj\Debug\BusinessCenter.Service.dll
+E:\DCBusinessCenter\BusinessCenter.Service\obj\Debug\BusinessCenter.Service.pdb
+D:\Balaji\BusinessCenter.Service\bin\Debug\BusinessCenter.Service.dll
+D:\Balaji\BusinessCenter.Service\bin\Debug\BusinessCenter.Service.pdb
+D:\Balaji\BusinessCenter.Service\bin\Debug\BusinessCenter.Data.dll
+D:\Balaji\BusinessCenter.Service\bin\Debug\EntityFramework.dll
+D:\Balaji\BusinessCenter.Service\bin\Debug\BusinessCenter.Data.pdb
+D:\Balaji\BusinessCenter.Service\bin\Debug\EntityFramework.xml
+D:\Balaji\BusinessCenter.Service\obj\Debug\BusinessCenter.Service.csprojResolveAssemblyReference.cache
+D:\Balaji\BusinessCenter.Service\obj\Debug\BusinessCenter.Service.dll
+D:\Balaji\BusinessCenter.Service\obj\Debug\BusinessCenter.Service.pdb
+C:\Users\CodeIT\Desktop\New folder\BusinessCenter.Service\bin\Debug\BusinessCenter.Service.dll
+C:\Users\CodeIT\Desktop\New folder\BusinessCenter.Service\bin\Debug\BusinessCenter.Service.pdb
+C:\Users\CodeIT\Desktop\New folder\BusinessCenter.Service\bin\Debug\BusinessCenter.Data.dll
+C:\Users\CodeIT\Desktop\New folder\BusinessCenter.Service\bin\Debug\EntityFramework.dll
+C:\Users\CodeIT\Desktop\New folder\BusinessCenter.Service\bin\Debug\BusinessCenter.Data.pdb
+C:\Users\CodeIT\Desktop\New folder\BusinessCenter.Service\bin\Debug\EntityFramework.xml
+C:\Users\CodeIT\Desktop\New folder\BusinessCenter.Service\obj\Debug\BusinessCenter.Service.csprojResolveAssemblyReference.cache
+C:\Users\CodeIT\Desktop\New folder\BusinessCenter.Service\obj\Debug\BusinessCenter.Service.dll
+C:\Users\CodeIT\Desktop\New folder\BusinessCenter.Service\obj\Debug\BusinessCenter.Service.pdb

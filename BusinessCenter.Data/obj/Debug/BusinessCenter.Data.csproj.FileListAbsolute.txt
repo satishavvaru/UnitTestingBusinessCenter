@@ -1,0 +1,27 @@
+E:\DCBusinessCenter\BusinessCenter.Data\bin\Debug\BusinessCenter.Data.dll.config
+E:\DCBusinessCenter\BusinessCenter.Data\bin\Debug\BusinessCenter.Data.dll
+E:\DCBusinessCenter\BusinessCenter.Data\bin\Debug\BusinessCenter.Data.pdb
+E:\DCBusinessCenter\BusinessCenter.Data\bin\Debug\EntityFramework.dll
+E:\DCBusinessCenter\BusinessCenter.Data\bin\Debug\EntityFramework.SqlServer.dll
+E:\DCBusinessCenter\BusinessCenter.Data\bin\Debug\EntityFramework.xml
+E:\DCBusinessCenter\BusinessCenter.Data\bin\Debug\EntityFramework.SqlServer.xml
+E:\DCBusinessCenter\BusinessCenter.Data\obj\Debug\BusinessCenter.Data.dll
+E:\DCBusinessCenter\BusinessCenter.Data\obj\Debug\BusinessCenter.Data.pdb
+D:\Projects\BusinessCenter.Data\obj\Debug\BusinessCenter.Data.csprojResolveAssemblyReference.cache
+D:\Projects\BusinessCenter.Data\obj\Debug\BusinessCenter.Data.dll
+D:\Projects\BusinessCenter.Data\obj\Debug\BusinessCenter.Data.pdb
+D:\Projects\BusinessCenter.Data\bin\Debug\BusinessCenter.Data.dll.config
+D:\Projects\BusinessCenter.Data\bin\Debug\BusinessCenter.Data.dll
+D:\Projects\BusinessCenter.Data\bin\Debug\BusinessCenter.Data.pdb
+D:\Projects\BusinessCenter.Data\bin\Debug\EntityFramework.xml
+D:\Projects\BusinessCenter.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\CodeIT\Desktop\New folder\BusinessCenter.Data\bin\Debug\BusinessCenter.Data.dll.config
+C:\Users\CodeIT\Desktop\New folder\BusinessCenter.Data\bin\Debug\BusinessCenter.Data.dll
+C:\Users\CodeIT\Desktop\New folder\BusinessCenter.Data\bin\Debug\BusinessCenter.Data.pdb
+C:\Users\CodeIT\Desktop\New folder\BusinessCenter.Data\bin\Debug\EntityFramework.dll
+C:\Users\CodeIT\Desktop\New folder\BusinessCenter.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\CodeIT\Desktop\New folder\BusinessCenter.Data\bin\Debug\EntityFramework.xml
+C:\Users\CodeIT\Desktop\New folder\BusinessCenter.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\CodeIT\Desktop\New folder\BusinessCenter.Data\obj\Debug\BusinessCenter.Data.csprojResolveAssemblyReference.cache
+C:\Users\CodeIT\Desktop\New folder\BusinessCenter.Data\obj\Debug\BusinessCenter.Data.dll
+C:\Users\CodeIT\Desktop\New folder\BusinessCenter.Data\obj\Debug\BusinessCenter.Data.pdb

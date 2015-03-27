@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BussinessCenterDbStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="Role">
+      <EntityTypeMapping TypeName="IsTypeOf(BussinessCenterDb.Role)">
+        <MappingFragment StoreEntitySet="Role">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SchemaVersions">
+      <EntityTypeMapping TypeName="IsTypeOf(BussinessCenterDb.SchemaVersions)">
+        <MappingFragment StoreEntitySet="SchemaVersions">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ScriptName" ColumnName="ScriptName" />
+          <ScalarProperty Name="Applied" ColumnName="Applied" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SecurityQuestion">
+      <EntityTypeMapping TypeName="IsTypeOf(BussinessCenterDb.SecurityQuestion)">
+        <MappingFragment StoreEntitySet="SecurityQuestion">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Question" ColumnName="Question" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User">
+      <EntityTypeMapping TypeName="IsTypeOf(BussinessCenterDb.User)">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+          <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="LastLoginDateandTime" ColumnName="LastLoginDateandTime" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+          <ScalarProperty Name="ActivationCode" ColumnName="ActivationCode" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+          <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+          <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
+          <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+          <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="SecurityQuestion1" ColumnName="SecurityQuestion1" />
+          <ScalarProperty Name="SecurityQuestion2" ColumnName="SecurityQuestion2" />
+          <ScalarProperty Name="SecurityQuestion3" ColumnName="SecurityQuestion3" />
+          <ScalarProperty Name="SecurityAnswer1" ColumnName="SecurityAnswer1" />
+          <ScalarProperty Name="SecurityAnswer2" ColumnName="SecurityAnswer2" />
+          <ScalarProperty Name="SecurityAnswer3" ColumnName="SecurityAnswer3" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ActivationDate" ColumnName="ActivationDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserClaim">
+      <EntityTypeMapping TypeName="IsTypeOf(BussinessCenterDb.UserClaim)">
+        <MappingFragment StoreEntitySet="UserClaim">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+          <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserLogin">
+      <EntityTypeMapping TypeName="IsTypeOf(BussinessCenterDb.UserLogin)">
+        <MappingFragment StoreEntitySet="UserLogin">
+          <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+          <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="UserRole" TypeName="BussinessCenterDb.UserRole" StoreEntitySet="UserRole">
+      <EndProperty Name="Role">
+        <ScalarProperty Name="Id" ColumnName="Role_Id" />
+      </EndProperty>
+      <EndProperty Name="User">
+        <ScalarProperty Name="Id" ColumnName="User_Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>
